@@ -1,22 +1,22 @@
 # tikvReader
 
 #### Description
-tikv读取器，像读取kafka 一样读取tikv
+Tikv reader, read Tikv like reading Kafka/Redis.
+The software of this program is developed through TIDB's tikvClient. TIDB storage architecture is in KV format, and when TIDB stores data, there will be an implicit row_id, which is the Key value of KV storage. You can read data by using this characteristic and the row_id.
 
 #### Software Architecture
-Software architecture description
+A Tikv GUI written using JavaFX.
 
 #### Installation
 
-1.  xxxx
-2.  xxxx
+1.  The EXE file in the application directory is the installed version, the RAR file is the no-installation version, and the JAR package can be started by yourself.
 3.  xxxx
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  Fill in the tipd address, you can choose to save, click connect and you can connect to the tables in Tikv.
+2.  Choose the corresponding table, choose consume data to consume data with a specified amount, and now consume data according to the key is to consume a single data with a specified key, similar to Redis.
+3.  Click on the consumed data to display the JSON formatted data.
 
 #### Contribution
 
@@ -26,11 +26,5 @@ Software architecture description
 4.  Create Pull Request
 
 
-#### Gitee Feature
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+![GIF 2023-9-22 15-33-58](GIF 2023-9-22 15-33-58.gif)
