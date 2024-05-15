@@ -1,8 +1,7 @@
 package com.lblj.view;
 
 /**
- * @Maintainer Daniel.Ma
- * @Email danielma@zhuanxinbaoxian.com
+ * @Maintainer 蜡笔老舅
  * @CreateDate 2023/9/11
  * @Version 1.0
  * @Comment

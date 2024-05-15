@@ -10,21 +10,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.14468371467025573" prefHeight="927.0" prefWidth="1488.0" style="-fx-background-color: rgb(199, 201, 199);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lblj.view.contorl.PleaseProvideControllerClassName">
+<SplitPane dividerPositions="0.14468371467025573" prefHeight="927.0" prefWidth="1488.0" style="-fx-background-color: rgb(199, 201, 199);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lblj.view.contorl.TIKVReaderController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="818.0" prefWidth="100.0">
             <children>
-                <TreeView fx:id="tree" layoutY="111.0" prefHeight="803.0" prefWidth="372.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="111.0" />
+                <TreeView fx:id="tree" layoutY="147.0" prefHeight="778.0" prefWidth="202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="147.0" />
                 <TextArea fx:id="pdadress" layoutX="6.0" layoutY="26.0" prefHeight="35.0" prefWidth="332.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" />
                 <Text layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tipdAddres" textAlignment="CENTER" wrappingWidth="150.99999564886093" AnchorPane.bottomAnchor="881.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="226.00000435113907" AnchorPane.topAnchor="6.0" />
-                <Button fx:id="save" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" onAction="#saveAdress" prefHeight="35.0" prefWidth="68.0" text="保存地址" AnchorPane.leftAnchor="10.0" />
-                <Button fx:id="connect" layoutX="259.0" layoutY="68.0" mnemonicParsing="false" onAction="#connectPD" prefHeight="35.0" prefWidth="68.0" text="连接" AnchorPane.rightAnchor="10.0" />
+                <Button fx:id="save" layoutX="10.0" layoutY="88.0" mnemonicParsing="false" onAction="#saveAdress" prefHeight="35.0" prefWidth="68.0" text="保存地址" AnchorPane.leftAnchor="10.0" />
+                <Button fx:id="connect" layoutX="138.0" layoutY="88.0" mnemonicParsing="false" onAction="#connectPD" prefHeight="35.0" prefWidth="68.0" text="连接" AnchorPane.rightAnchor="6.0" />
             </children>
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="818.0" prefWidth="400.0">
             <children>
-                <TextArea fx:id="tx" layoutX="-5.0" layoutY="338.0" prefHeight="555.0" prefWidth="497.0" text="&#10; " AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="338.0" />
-                <TableView fx:id="table" layoutX="3.0" layoutY="111.0" prefHeight="221.0" prefWidth="896.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="111.0">
+                <TextArea fx:id="tx" layoutX="-5.0" layoutY="369.0" prefHeight="546.0" prefWidth="800.0" text="&#10; " AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="369.0" />
+                <TableView fx:id="table" layoutY="148.0" prefHeight="217.0" prefWidth="1258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="148.0">
                     <columns>
                         <TableColumn fx:id="tableKeys" prefWidth="99.0" text="key" />
                         <TableColumn fx:id="tableValues" prefWidth="1011.0" text="value" />

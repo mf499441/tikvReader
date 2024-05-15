@@ -1,8 +1,7 @@
 package com.lblj.view.utils;
 
 /**
- * @Maintainer Daniel.Ma
- * @Email danielma@zhuanxinbaoxian.com
+ * @Maintainer 蜡笔老舅
  * @CreateDate 2023/3/17
  * @Version 1.0
  * @Comment 通过 tikv 查询 tidb 数据 的解码
@@ -110,17 +109,26 @@ public class TidbRowKeyUtil extends Key implements Serializable {
     // 通过解析到的tidb Value 解析为JSON 数据
     public static JSONObject getDataJSON(Kvrpcpb.KvPair record, List<TiColumnInfo> columns, TiTableInfo tiTableInfo) {
         JSONObject jsonObject = new JSONObject();
-        Object[] tikvValues =
-                decodeObjects(
-                        record.getValue().toByteArray(),
-                        RowKey.decode(record.getKey().toByteArray()).getHandle(),
-                        tiTableInfo);
-        List<Object> objects = Arrays.asList(tikvValues);
-        for (int i = 0; i < tikvValues.length; i++) {
-            String type = columns.get(i).getType().getName();
-            jsonObject.put(columns.get(i).getName(),getDataObject(objects.get(i),type));
+        try {
+            Object[] tikvValues =
+                    decodeObjects(
+                            record.getValue().toByteArray(),
+                            RowKey.decode(record.getKey().toByteArray()).getHandle(),
+                            tiTableInfo);
+            List<Object> objects = Arrays.asList(tikvValues);
+            for (int i = 0; i < tikvValues.length; i++) {
+                String type = columns.get(i).getType().getName();
+                jsonObject.put(columns.get(i).getName(),getDataObject(objects.get(i),type));
+            }
+            jsonObject.put("row_id",decode(record.getKey().toByteArray()).getHandle());
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("key = " + TidbRowKeyUtil.decode(record.getKey().toByteArray()));
+        }finally {
+            return jsonObject;
+
         }
-        return jsonObject;
+
     }
 
     // tidb timestamp和time 格式的数据，进行特别处理
